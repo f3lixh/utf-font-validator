@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Bootshaus";
+  src: url("./Bootshaus/Bootshaus-Regular.ttf");
+}
+
+h1, h2 {
+  font-weight: unset;
+  font-size: 64px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+  color: white;
+}
+
+body {
+  font-family: "Bootshaus";
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fontdrop {
+  border: 2px white dashed;
+  border-radius: 24px;
+  height: 250px;
+  background-color: #ffffff05;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.output {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.char {
+  font-size: 100px;
+  height: min-content;
+  padding: 12px 32px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.char p{
+  margin-bottom: 12px;
+}
+
+.char span {
+  font-size: 16px !important;
+  font-family: "Courier New" !important;
+}
+
+
+.noUniChars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.missingUnicode {
+  font-family: "Courier New" !important;
+  font-size: 32px;
+  padding: 12px 32px;
+  background-color: red;
+  border-radius: 50px;
+}
