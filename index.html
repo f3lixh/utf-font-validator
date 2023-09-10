@@ -12,7 +12,6 @@
   <body>
     <main>
       <h1>Drop the font here</h1>
-      <!-- <div id="output">Das ist ein Testtext.</div> -->
       <div
         ondrop="dropHandler(event)"
         ondragover="dragOverHandler(event)"
@@ -21,7 +20,7 @@
         <p>Drag one or more files to this <i>drop zone</i>.</p>
       </div>
       <section>
-        <button onclick="copyUnicodeToClipboard()">copy to clipboard</button>
+        <button class="button" onclick="copyUnicodeToClipboard()">copy to clipboard</button>
       </section>
       <section hidden id="noUniChars">
         <h2>Missing Unicodes</h2>
