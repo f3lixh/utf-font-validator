@@ -61,6 +61,18 @@ p {
   padding: 0;
 }
 
+textarea {
+  background: transparent;
+  outline: none;
+  appearance: none;
+  border: 1px solid white;
+  padding: 1rem;
+  width: 100%;
+  font-size: 16px ;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
 
 .char {
   font-size: 100px;

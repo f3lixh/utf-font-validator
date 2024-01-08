@@ -2,6 +2,7 @@ window.dragOverHandler = dragOverHandler;
 window.dropHandler = dropHandler;
 window.handleFileInput = handleFileInput;
 window.copyUnicodeToClipboard = copyUnicodeToClipboard;
+window.copyLangToClipboard = copyLangToClipboard;
 
 const unneccessaryUnicodes = [0, 13, 32];
 var unicodesResult = [];
@@ -125,4 +126,20 @@ function handleFileInput(event) {
 
 function dragOverHandler(event) {
   event.preventDefault();
+}
+
+function copyLangToClipboard() {
+  const htmlString  = document.getElementById("lang").value;
+
+  var parser = new DOMParser();
+  var doc = parser.parseFromString(htmlString, 'text/html');
+
+// Extrahieren der Werte aus den <li>-Elementen
+  var items = doc.querySelectorAll('.languageItem');
+  var values = Array.from(items).map(item => item.textContent);
+
+  console.log(values);
+  var quotedValues = values.map(value => `"${value}"`);
+
+  navigator.clipboard.writeText(`[${quotedValues.join(", ")}]`);
 }
